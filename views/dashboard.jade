@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    style.
+      table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      }
+      td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      }
+      tr:nth-child(even) {
+      background-color: #dddddd;
+      }   
+    title Dashboard 
+  body
+    h1(style='text-align:center;') API - 1
+    table.table.table-striped
+      tr
+        th Students ID
+        th Name
+
+      each n in students
+        tr
+          td= n.ID
+          td= n.name
+    h1(style='text-align:center;') API - 2
+    |    
+    form(name='form1', method='POST', action='/fetchstudent')
+      table
+        tr
+          td Enter Student ID
+          |         
+          td
+            input#stID(type='number', name='id', required='')
+        |         
+        tr
+          td(colspan='2')
+            input(type='submit', value='Save')

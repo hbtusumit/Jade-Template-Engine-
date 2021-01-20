@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    style.
+      table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      }
+      td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      }
+      tr:nth-child(even) {
+      background-color: #dddddd;
+      }
+    title Dashboard
+  body
+    h1(style='text-align:center;') API - 1       
+    table.table.table-striped
+      tbody
+        tr
+          th Student ID
+          th Name
+          th Age
+          th Roll No
+          th Class
+        
+      each n in students
+        tr
+          td= n.ID
+          td= n.name
+          td= n.age
+          td= n.rollno
+          td= n.class
